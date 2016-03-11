@@ -1,0 +1,237 @@
+
+    <html class="no-js" lang="en">
+    <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Lazy Out</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script url="code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	  <script type="text/javascript" src="http://www.google-analytics.com/analytics.js"></script>
+    <script url="code.jquery.com/jquery-1.10.2.js"></script>
+
+    <script>
+
+    $(document).ready(function() {
+        function close_accordion_section() {
+            $('.accordion .accordion-section-title').removeClass('active');
+            $('.accordion .accordion-section-content').slideUp(300).removeClass('open');
+        }
+
+        $('.accordion-section-title').click(function(e) {
+            var currentAttrValue = $(this).attr('href');
+
+            if($(e.target).is('.active')) {
+                close_accordion_section();
+            }else {
+                close_accordion_section();
+                $(this).addClass('active');
+                $('.accordion ' + currentAttrValue).slideDown(300).addClass('open');
+              }
+          });
+      });
+    </script>
+</head>
+
+<div id="fix">
+  <div class="switch tiny">
+          <input class="switch-input" id="tinySwitch" type="checkbox" name="exampleSwitch">
+          <label class="switch-paddle" for="tinySwitch">
+            <span class="show-for-sr">Dark</span>
+          </label>
+        </div>
+</div>
+
+
+
+
+<body style="padding= 3%;">
+
+
+  <div class="title-bar">
+            <span class="title-bar-title">Lazy Out</span>
+  </div>
+
+
+  <div aria-label="You are here:" role="navigation" id="nav">
+          <ul class="breadcrumbs">
+            <li><a href="#">File</a></li>
+            <li><a href="#">Edit</a></li>
+            <li><a href="#">View</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+</div>
+
+      <div id='left'>
+
+      		<div class="accordion">
+      			<div class="accordion-section">
+      				<a class="accordion-section-title" href="#accordion-1">Item One</a>
+      				<div id="accordion-1" class="accordion-section-content">
+      					<p>I love her and she loves me and we love everybody
+                  from Tintin to Tarzan expect Robert Mugabe
+                  We sing along and dance along in high grass and daisies
+                  and everybody knows that we're away with the fairies.</p>
+      				</div>
+      			</div>
+
+      			<div class="accordion-section">
+      				<a class="accordion-section-title" href="#accordion-2">Item Two</a>
+      				<div id="accordion-2" class="accordion-section-content">
+      					<p>I love her and she loves me and we love everybody
+                  from Tintin to Tarzan expect Robert Mugabe
+                  We sing along and dance along in high grass and daisies
+                  and everybody knows that we're away with the fairies.</p>
+      				</div>
+      			</div>
+
+      			<div class="accordion-section">
+      				<a class="accordion-section-title" href="#accordion-3">Item Three</a>
+      				<div id="accordion-3" class="accordion-section-content">
+      					<p>I love her and she loves me and we love everybody
+                  from Tintin to Tarzan expect Robert Mugabe
+                  We sing along and dance along in high grass and daisies
+                  and everybody knows that we're away with the fairies.</p>
+      				</div>
+      			</div>
+
+            <div class="accordion-section">
+              <a class="accordion-section-title" href="#accordion-4">Item Four</a>
+              <div id="accordion-4" class="accordion-section-content">
+                <p>I love her and she loves me and we love everybody
+                  from Tintin to Tarzan expect Robert Mugabe
+                  We sing along and dance along in high grass and daisies
+                  and everybody knows that we're away with the fairies.</p>
+              </div>
+            </div>
+
+      		</div>
+
+      </div>
+
+      <div id="middle">
+          <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,900"      rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+          <div class="container">
+
+		<div class="calendar-container">
+
+			<header>
+				
+				<div class="day">12</div>
+				<div class="month">February</div>
+
+			</header>
+
+			<table class="calendar">
+				
+				<thead>
+
+					<tr>
+
+						<td>Mon</td>
+						<td>Tue</td>
+						<td>Wed</td>
+						<td>Thu</td>
+						<td>Fri</td>
+						<td>Sat</td>
+						<td>Sun</td>
+
+					</tr>
+
+				</thead>
+
+				<tbody>
+
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+                        <td>5</td>
+						<td>6</td>
+						<td>7</td>
+					</tr>
+
+					<tr>
+						<td>8</td>
+						<td>9</td>
+						<td>10</td>
+						<td>11</td>
+                        <td class="current-day">12</td>
+						<td>13</td>
+						<td>14</td>
+					</tr>
+
+					<tr>
+						<td>15</td>
+						<td>16</td>
+						<td>17</td>
+						<td>18</td>
+                        <td>19</td>
+						<td>20</td>
+						<td>21</td>
+					</tr>
+
+					<tr>
+						<td>22</td>
+						<td>23</td>
+						<td>24</td>
+						<td>25</td>
+                        <td>26</td>
+						<td>27</td>
+						<td>28</td>
+					</tr>
+
+					<tr>
+						<td>29</td>
+						<td class="next-month">1</td>
+						<td class="next-month">2</td>
+						<td class="next-month">3</td>
+                        <td class="next-month">4</td>
+                        <td class="next-month">5</td>
+                        <td class="next-month">6</td>
+					</tr>
+
+				</tbody>
+
+			</table>
+
+			<div class="ring-left"></div>
+			<div class="ring-right"></div>
+
+		</div> <!-- end calendar-container -->
+
+	</div> <!-- end container -->
+          
+      </div>
+
+      <div id="right">
+        <p id="yey">TO-DO:</p>
+        <p id="things">
+
+           <input id="checkbox1" type="checkbox"><label for="checkbox1">Task 1</label><br>
+           <input id="checkbox2" type="checkbox"><label for="checkbox2">Exam 1</label><br>
+           <input id="checkbox3" type="checkbox"><label for="checkbox3">Meeting 1</label><br>
+           <input id="checkbox4" type="checkbox"><label for="checkbox4">Task 2</label><br>
+           <input id="checkbox5" type="checkbox"><label for="checkbox5">Exam 2</label><br>
+           <input id="checkbox6" type="checkbox"><label for="checkbox6">Meeting 2</label><br>
+
+        </p>
+
+        <div class="success progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+        <div class="progress-meter" style="width: 25%">
+          <p class="progress-meter-text">25%</p>
+        </div>
+      </div>
+      </div>
+
+
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+      <script>
+            $(document).foundation();
+          </script>
+</body>
+</html>
