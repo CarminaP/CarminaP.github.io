@@ -3,16 +3,18 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Lazy Out</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
     <style type="text/css">
         form {
-            background-color: #FF0000;
             display: inline-block;
+           align-self:  center;
         }
         
         #button{
             display: inline-block;
             height: 20px;
             width: 70px;
+            font-family: "simplifica";
             background-color:darkgreen;
             color:#ffffff;
             border-radius:5px;
@@ -21,6 +23,10 @@
             }
 
             .list {
+                font-family: 'austie';
+                font-weight: bold;
+                font-size: 40px;
+                text-align: center;
                 color:black;
             }
         }
@@ -44,16 +50,16 @@
       });
     </script>
 </head>
-<body>
-    <div id="right" >
+<body bgcolor= "#FF0000">
+    <div id="center" >
         <p id="yey">TO-DO:</p>
-        <p id="things"> 
+        <p id ="things"> 
             <form name ="checkListForm">
                 <input type="text" name="checkListItem"/>
           </form>
           <div id="button"> Add </div>
           <br/>
-          <div class = "list"></div>
+          <div id = "center" class = "list"></div>
         </p>
       </div>
     </body>
