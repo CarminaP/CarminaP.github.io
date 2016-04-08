@@ -5,6 +5,14 @@
     <title>Lazy Out</title>
         <link rel="stylesheet" type="text/css" href="css/style.css" />
     <style type="text/css">
+        #yay{
+  color: black;
+  font-family: 'austie';
+  font-weight: bold;
+  font-size: 100px;
+  text-align: center;
+}
+        
         form {
             display: inline-block;
            align-self:  center;
@@ -12,6 +20,7 @@
         
         #button{
             display: inline-block;
+            align-self: center;
             height: 20px;
             width: 70px;
             font-family: "simplifica";
@@ -37,12 +46,12 @@
 	  <script type="text/javascript" src="http://www.google-analytics.com/analytics.js"></script>
     <script url="code.jquery.com/jquery-1.10.2.js"></script>
 
-    <script>
+    <script >
 
     $(document).ready(function() {
         $("#button").click(function(){
            var toAdd = $("input[name=checkListItem]").val();
-            $(".list").append('<div class="item">'+ toAdd + '</div>')
+            $(".list").append('<div class="item"> ✘ '+ toAdd + '</div>')
         });
         $(document).on("click",".item", function(){
            $(this).remove(); 
@@ -51,16 +60,15 @@
     </script>
 </head>
 <body bgcolor= "#FF0000">
+    <a href="http://fornesarturo.github.io/lazyouthub"><img src="https://cdn2.iconfinder.com/data/icons/basic-4/512/home-128.png" height="42" width="42"/></a>
+    <div id="yay">TO-DO:</div>
     <div id="center" >
-        <p id="yey">TO-DO:</p>
-        <p id ="things"> 
             <form name ="checkListForm">
                 <input type="text" name="checkListItem"/>
           </form>
           <div id="button"> Add </div>
           <br/>
           <div id = "center" class = "list"></div>
-        </p>
       </div>
     </body>
 </html>
