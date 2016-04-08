@@ -41,6 +41,13 @@
         }
         </style>
 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script url="code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	  <script type="text/javascript" src="http://www.google-analytics.com/analytics.js"></script>
+    <script url="code.jquery.com/jquery-1.10.2.js"></script>
+
+    <script >
+
     $(document).ready(function() {
         $("#button").click(function(){
            var toAdd = $("input[name=checkListItem]").val();
@@ -55,11 +62,13 @@
 <body bgcolor= "#FF0000">
     <a href="http://fornesarturo.github.io/lazyouthub"><img src="https://cdn2.iconfinder.com/data/icons/basic-4/512/home-128.png" height="42" width="42"/></a>
     <div id="yay">TO-DO:</div>
-            <form id ="center" name ="checkListForm">
+    <div id="center" >
+            <form name ="checkListForm">
                 <input type="text" name="checkListItem"/>
           </form>
           <div id="button"> Add </div>
           <br/>
           <div id = "center" class = "list"></div>
+      </div>
     </body>
 </html>
