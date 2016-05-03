@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<meta charset="UTF-8">
+	<title>Persona</title>
+
+  <script>
+
+      $(document).ready(function(){
+
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
+
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	});
+});
+  </script>
+
+	<style>
+	html,body{
+		width:100%;
+		height:100%;}
+
+	#body{
+		margin-top:30%;
+		font-style:normal;}
+	#Back{
+    background-image: url(https://secure.static.tumblr.com/428fd8157408a0482dde0a4cb5934d8c/exunhl7/02Tnibwxj/tumblr_static_tumblr_static__640.jpg);
+		height: 100%;
+		background-repeat:repeat;
+    padding-left: 35%;
+    padding-right: : 35%;
+    padding-top: 5%;
+    font-size: 150px;
+    }
+	#First{
+		width: 100%;
+		height: 100%;
+		position:fixed;
+		z-index:-1;
+		margin-top: -30%; }
+	#Content{
+		align-content: center;
+		align-items: center;
+		background-color: White;
+		padding-top:60px;
+		padding-bottom: 60px;
+		}
+
+    .container{
+        width: 95%;
+        margin:0 auto;
+    }
+
+
+    ul.tabs{
+        margin: 0px;
+        padding: 0px;
+        list-style: none;}
+
+    ul.tabs li{
+    	background-color:  #f0f5f5;
+      padding: 5px;
+    	display: inline-block;
+    	cursor: pointer;}
+
+    ul.tabs li.current{
+      background: #d1e0e0;
+    	color: #222;}
+
+    .tab-content{
+    	display: none;
+    			padding: 70px;
+          height: 450px;
+      background-color:  #e0ebeb;}
+
+    .tab-content.current{
+    	display: inherit;
+      height: 300px;}
+	</style>
+
+</head>
+
+<body>
+
+<div id='First'>
+	<div id='Back'>Persona</div>
+</div>
+
+<div id='body'>
+<div id='Content'>
+
+  <div class="container">
+
+  <ul class="tabs">
+  		<li class="tab-link current" data-tab="tab-1">Perfil</li>
+  		<li class="tab-link" data-tab="tab-2">Personalidad</li>
+  		<li class="tab-link" data-tab="tab-3">Referencias e Influencias</li>
+      <li class="tab-link" data-tab="tab-4">Arquetipo y Citas</li>
+      <li class="tab-link" data-tab="tab-5">Habilidad</li>
+      <li class="tab-link" data-tab="tab-6">Metas</li>
+      <li class="tab-link" data-tab="tab-7">Dispositivos y Plataformas</li>
+      <li class="tab-link" data-tab="tab-8">Software y Aplicaciones</li>
+      <li class="tab-link" data-tab="tab-9">Lo que quiere</li>
+      <li class="tab-link" data-tab="tab-10">Relación</li>
+
+  	</ul>
+
+  	<div id="tab-1" class="tab-content current">
+      <br>3.1- Perfil Demográfico<br>
+      <br>Edad: 18-23
+      <br>Género: Masculino/Femenino
+      <br>Tamaño de familia: 4 en promedio
+      <br>Ingresos: salario mínimo / nulo
+      <br>Estudiante: universitario
+      <br>Clase Social: Media alta/ alta
+      <br>Geografía: Guadalajara, Jalisco, México
+      <br>Estilo de vida: estudiar hasta morir
+      <br>Actividades: estudiar, socializar
+      <br>Opiniones: innovación
+      <br>Motivaciones: Aprender, rayo emprendedor
+      <br>Personalidad: Perfil ideal – ESTP o ISTP porque es una persona desorganizada, busca conocimiento y le gusta la eficiencia y se concentra en la realidad, le gustan las ideas que tienen aplicaciones prácticas.
+      <br>Comportamiento hacia el producto:  Uso regular, organizador en general
+      <br>Tipo de usuario: Avanzado
+  	</div>
+
+  	<div id="tab-2" class="tab-content">
+      <br>3.2 - Personalidad<br>
+	     <br>ESTP o ISTP: se refiere a tipos de personalidad tanto extrovertido como introvertido, siendo más concreto que abstracto, centrando su atención en los detalles y las realidades inmediatas. Tienden a basarse en criterios objetivos, dándole más peso a la lógica. Prefieren mantener sus opiniones abiertas a cualquier cambio.
+  	</div>
+
+    <div id="tab-3" class="tab-content">
+      <br>3.3 - Referencias e Influencias<br>
+	     <br>Referencias: internet, tecnología, software, aplicaciones.
+	      <br>Influencias: compañeros de clase, amigos, tecnología.
+  	</div>
+
+    <div id="tab-4" class="tab-content">
+      <br>3.4 - Arquetipo y Citas<br>
+	     <br>Arquetipo: alguien en busca de organización con habilidad tecnológica avanzada.
+	      <br>Cita: “En un mundo donde internet transforma la comunicación y la hace más inclusiva, nadie debería desaprovechar la oportunidad de compartir sus ideas.”
+  	</div>
+
+    <div id="tab-5" class="tab-content">
+      <br>3.5 - Habilidad tecnológica<br>
+      <br>Intermedio-Avanzado: Alguien capaz de hacer uso de un smartphone o tableta y de implementar sus aplicaciones a la vida diaria.
+    </div>
+
+    <div id="tab-6" class="tab-content">
+      <br>3.6 - Metas de Experiencia<br>
+      <br>Que el usuario disfrute usar la aplicación y no lo vea como una tarea más, sino que encuentre el balance que quiere en cuanto a sus trabajos por hacer y su tiempo libre.
+  	</div>
+
+    <div id="tab-7" class="tab-content">
+      <br>3.7 - Dispositivos y Plataformas<br>
+	     <br>Dispositivos: smartphones, tabletas y/o computadoras.
+	      <br>Plataformas: iOS, android, windows, mac, linux. En navegador web.
+  	</div>
+
+    <div id="tab-8" class="tab-content">
+      <br>3.8 - Uso de Software y Aplicaciones<br>
+	    <br>Software: Office, Chrome, Skype.
+	    <br>Aplicaciones: Facebook, Messenger, Whatsapp, Spotify, Gmail.
+  	</div>
+
+    <div id="tab-9" class="tab-content">
+      <br>3.9 - Lo que quiere el usuario y lo que no. (Must do / Must never)<br>
+      <br>Fácil de usar
+      <br>Personalizable
+      <br>Efectivo
+      <br>Ser muy complicado
+      <br>Lleno de adds
+      <br>Muy pesado (en cuanto a storage)
+
+  	</div>
+
+    <div id="tab-10" class="tab-content">
+      <br>3.10 - Relación con el producto y la marca<br>
+	    <br>Tanto el producto como la marca nacen de la idea de alumnos del TEC para ayudar a otros alumnos del TEC.
+  	</div>
+
+  </div>
+
+
+</div>
+</div>
+
+<!--
+
+Arturo Fornés Arvayo - A01227071
+Carmina Pérez Guerrero - A01226436
+Lucía Velasco García - A01631385
+
+-->
+
+</body>
+</html>

@@ -1,0 +1,408 @@
+@font-face {
+  font-family: simplifica;
+  src: url("../fonts/sim.ttf")
+}
+
+@font-face {
+  font-family: austie;
+  src: url("../fonts/AustieBostDescriptions.ttf")
+}
+
+
+.accordion, .accordion * {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+.accordion {
+    text-decoration: none;
+    border-radius:3px;
+    background:#f7f7f7;
+}
+
+
+.accordion-section-title {
+    font-family: "austie";
+    font-weight: bold;
+    text-decoration: none;
+    width:100%;
+    padding:15px;
+    display:inline-block;
+    border-bottom:1px solid #DCDCDC;
+    font-size:1.200em;
+    color:#1a1a1a;
+}
+
+
+.accordion-section-content {
+    display:none;
+    margin: 5%;
+    font-family:monospace;
+}
+
+#fix{
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 5%;
+  float: right;
+  padding: 2%;
+}
+
+#yey{
+  color: black;
+  font-family: 'austie';
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+
+#nav{
+  width:100%;
+  height: 10%;
+  margin:0 auto;
+}
+
+#left{
+    position: fixed
+    overflow-y: scroll;
+    height: 60%;
+    float: left;
+    width: 25%;
+    padding: 5px;
+    padding-top: 0;
+    margin-top: 0;
+    padding-left: 2%;
+}
+
+#things{
+  font-family: "simplifica";
+  font-size: 20px;
+  text-align: left;
+  line-height: 150%;
+}
+
+#middle{
+  position: fixed
+  overflow-y: scroll;
+  float:left;
+  width: 25%;
+  padding: 5%;
+  padding-top: 0;
+  margin-top: 0;
+  margin-left: 2%;
+}
+
+#right{
+  position: fixed
+  overflow-y: scroll;
+    float: right;
+    width: 25%;
+    padding: 5%;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+label {
+  display:inline-flex;
+    width: 5em;
+}
+
+.title-bar {
+    color: black;
+    padding: 0.5rem;
+    text-align: center;
+    height: 25%;
+    font-family:'austie';
+}
+
+.title-bar-title {
+    font-size: 100px;
+    vertical-align: middle;
+    display: inline-block;
+    text-align:left;
+}
+
+.label {
+  display: inline-block;
+  padding: 0.33333rem 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: default;
+  border-radius: 0;
+  background: #2199e8;
+  color: #fefefe; }
+
+.breadcrumbs {
+  vertical-align: middle;
+  width: 35%;
+  text-decoration: none;
+  list-style: none;
+  margin: 0 auto;
+  font-family: simplifica;
+  font-size: 20px;}
+
+.breadcrumbs::before, .breadcrumbs::after {
+    content: ' ';
+    display: table; }
+
+.breadcrumbs::after {
+    clear: both; }
+
+.breadcrumbs li {
+
+    text-align: center;
+    width: 25%;
+    margin: 0 auto;
+    display: inline;
+    float: left;
+    color: black;
+    cursor: default;
+    text-transform: uppercase; }
+
+.breadcrumbs li::after,.breadcrumbs li::before {
+    text-align: center;
+    color: black;
+    content: " -";
+    position: relative;
+    top: 1px;
+    opacity: 1; }
+
+
+.breadcrumbs a {
+    text-align: center;
+    margin: 0 auto;
+    text-decoration: none;
+    color: black;
+   padding-left: 5%}
+
+.breadcrumbs a:hover {
+   text-decoration: underline; }
+
+   .switch {
+     margin-bottom: 1rem;
+     outline: 0;
+     position: relative;
+     -webkit-user-select: none;
+        -moz-user-select: none;
+         -ms-user-select: none;
+             user-select: none;
+     color: #fefefe;
+     font-weight: bold;
+     font-size: 0.875rem; }
+
+   .switch-input {
+     opacity: 0;
+     position: absolute; }
+
+   .switch-paddle {
+     background: #cacaca;
+     cursor: pointer;
+     display: block;
+     position: relative;
+     width: 4rem;
+     height: 2rem;
+     transition: all 0.25s ease-out;
+     border-radius: 0;
+     color: inherit;
+     font-weight: inherit; }
+     input + .switch-paddle {
+       margin: 0; }
+     .switch-paddle::after {
+       background: #fefefe;
+       content: '';
+       display: block;
+       position: absolute;
+       height: 1.5rem;
+       left: 0.25rem;
+       top: 0.25rem;
+       width: 1.5rem;
+       transition: all 0.25s ease-out;
+       -webkit-transform: translate3d(0, 0, 0);
+               transform: translate3d(0, 0, 0);
+       border-radius: 0; }
+     input:checked ~ .switch-paddle {
+       background: #2199e8; }
+       input:checked ~ .switch-paddle::after {
+         left: 2.25rem; }
+     [data-whatinput='mouse'] input:focus ~ .switch-paddle {
+       outline: 0; }
+
+   .switch-active, .switch-inactive {
+     position: absolute;
+     top: 50%;
+     -webkit-transform: translateY(-50%);
+         -ms-transform: translateY(-50%);
+             transform: translateY(-50%); }
+
+   .switch-active {
+     left: 8%;
+     display: none; }
+     input:checked + label > .switch-active {
+       display: block; }
+
+   .switch-inactive {
+     right: 15%; }
+     input:checked + label > .switch-inactive {
+       display: none; }
+
+   .switch.tiny .switch-paddle {
+     width: 3rem;
+     height: 1.5rem;
+     font-size: 0.625rem; }
+
+   .switch.tiny .switch-paddle::after {
+     width: 1rem;
+     height: 1rem; }
+
+   .switch.tiny input:checked ~ .switch-paddle:after {
+     left: 1.75rem; }
+
+
+     .show-for-sr,
+     .show-on-focus {
+       position: absolute !important;
+       width: 1px;
+       height: 1px;
+       overflow: hidden;
+       clip: rect(0, 0, 0, 0); }
+
+
+       .progress {
+         background-color: #cacaca;
+         height: 1rem;
+         margin-bottom: 1rem;
+         border-radius: 0; }
+         .progress.primary .progress-meter {
+           background-color: #2199e8; }
+         .progress.secondary .progress-meter {
+           background-color: #777; }
+         .progress.success .progress-meter {
+           background-color: #3adb76; }
+         .progress.alert .progress-meter {
+           background-color: #ec5840; }
+         .progress.warning .progress-meter {
+           background-color: #ffae00; }
+
+       .progress-meter {
+         position: relative;
+         display: block;
+         width: 0%;
+         height: 100%;
+         background-color: #2199e8;
+         border-radius: 0; }
+         .progress-meter .progress-meter-text {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           -webkit-transform: translate(-50%, -50%);
+               -ms-transform: translate(-50%, -50%);
+                   transform: translate(-50%, -50%);
+           margin: 0;
+           font-size: 0.75rem;
+           font-weight: bold;
+           color: #fefefe;
+           white-space: nowrap; }
+           table {
+           	border-collapse: collapse;
+           	border-spacing: 0;
+           }
+
+           td {
+           	padding: 0;
+           }
+
+           .container {
+           	height: 600px;
+           	left: 50%;
+           	margin: -300px 0 0 -300px;
+           	position: absolute;
+           	top: 65%;
+           	width: 600px;
+           }
+
+           .calendar-container {
+           	position: relative;
+           	width: 450px;
+           }
+
+           .calendar-container header {
+           	border-radius: 1em 1em 0 0;
+           	background: #e66b6b;
+           	color: #fff;
+           	padding: 3em 2em;
+           }
+
+           .day {
+           	font-size: 8em;
+           	font-weight: 900;
+           	line-height: 1em;
+           }
+
+           .month {
+           	font-size: 4em;
+           	line-height: 1em;
+           	text-transform: lowercase;
+           }
+
+           .calendar {
+           	background: #fff;
+           	border-radius: 0 0 1em 1em;
+           	-webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+           	box-shadow: 0 2px 1px rgba(0, 0, 0, .2), 0 3px 1px #fff;
+           	color: #555;
+           	display: inline-block;
+           	padding: 2em;
+           }
+
+           .calendar thead {
+           	color: #e66b6b;
+           	font-weight: 700;
+           	text-transform: uppercase;
+           }
+
+           .calendar td {
+           	padding: .5em 1em;
+           	text-align: center;
+           }
+
+           .calendar tbody td:hover {
+           	background: #cacaca;
+           	color: #fff;
+           }
+
+           .current-day {
+           	color: #e66b6b;
+           }
+
+           .prev-month,
+           .next-month {
+           	color: #cacaca;
+           }
+
+           .ring-left,
+           .ring-right {
+           	position: absolute;
+           	top: 230px;
+           }
+
+           .ring-left { left: 2em; }
+           .ring-right { right: 2em; }
+
+           .ring-left:before,
+           .ring-left:after,
+           .ring-right:before,
+           .ring-right:after {
+           	background: #fff;
+           	border-radius: 4px;
+           	-webkit-box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
+           	box-shadow: 0 3px 1px rgba(0, 0, 0, .3), 0 -1px 1px rgba(0, 0, 0, .2);
+           	content: "";
+           	display: inline-block;
+           	margin: 8px;
+           	height: 32px;
+           	width: 8px;
+           }
